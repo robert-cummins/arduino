@@ -17,6 +17,15 @@ void setup() {
   pinMode(buttonPin, INPUT_PULLUP);
 }
 
+/**
+ * Continuously checks the state of a button to toggle the direction of the stepper motor.
+ * - Reads the button state and detects a press (transition from HIGH to LOW).
+ * - If the button is pressed, it toggles the rotation direction of the stepper motor.
+ * - Prints the new direction to the Serial Monitor.
+ * - Moves the stepper motor in small increments in the current direction.
+ * - Introduces a short delay to allow for debouncing.
+ */
+
 void loop() {
   buttonState = digitalRead(buttonPin);
 
